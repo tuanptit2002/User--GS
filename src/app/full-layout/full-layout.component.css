@@ -1,0 +1,77 @@
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/images/background.jpg);
+    background-size: initial;
+}
+.nav{
+    background: url(../../assets/images/background-header.jpg)no-repeat 0 0;;
+    height: 20vh;
+    width: 944vw;
+	margin:50px 0 0 25vw;
+	
+}
+
+h2{
+    display: inline;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+.home{
+    position: relative;
+   top:-26px;
+   right: -45px;
+   text-decoration: none;
+
+}
+.parent{
+    position: relative;
+    top:-26px;
+   right: -55px;
+   text-decoration: none;
+
+}
+.tutor{
+    position: relative;
+    top:-26px;
+   right: -70px;
+   text-decoration: none;
+
+}
+.class{
+    position: relative;
+    top:-26px;
+   left: 100px;
+   text-decoration: none;
+
+}
+
+.recruitment{
+    position: relative;
+    top:-26px;
+   left: 120px;
+   text-decoration: none;
+
+}
+
+.contact{
+    position: relative;
+    top:-26px;
+   text-decoration: none;
+   left: 140px;
+
+}
+.icon{
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+.nav.home{
+    text-decoration: none;
+}
+h2:hover{
+    background-color: orange;
+}
+/* a:hover{
+} */
