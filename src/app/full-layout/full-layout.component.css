@@ -1,17 +1,23 @@
-header{
+html{
     width: 100vw;
     height: 100vh;
     background-image: url(../../assets/images/background.jpg);
     background-size: initial;
 }
 .nav{
-    background: url(../../assets/images/background-header.jpg)no-repeat 0 0;;
+    background: url(../../assets/images/background-header.jpg)no-repeat 0 0;
     height: 20vh;
     width: 944vw;
 	margin:50px 0 0 25vw;
 	
 }
+.head-fix{
+    position: relative;
+    /* height: 20vh;
+    width: 944vw; */
+	margin:-30px 0 0 28vw;
 
+}
 h2{
     display: inline;
     padding: 10px;
@@ -73,5 +79,14 @@ h2{
 h2:hover{
     background-color: orange;
 }
-/* a:hover{
-} */
+a{
+    top:50px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+

@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<html>
 <head>
 </head>
 <body>
@@ -13,10 +14,22 @@
             <a routerLink="/class-new" style="text-decoration: none"><h2 class="class" >LỚP MỚI</h2></a>
             <a routerLink="/recruitment" class="recruitment" style="text-decoration: none"><h2>TUYỂN DỤNG</h2></a>
             <a routerLink="/contact" style="text-decoration: none"><h2 class="contact">LIÊN HỆ</h2></a>
-
+            
         </nav>
+        <div>
+        <img src="../../assets/images/header2.jpg" class="head-fix">
+    </div>
+        
+        
     </header>
    </div>
+   <router-outlet></router-outlet>
+   <footer>
+    <div class="container">
+        <p>&copy; 2023 Tên Của Bạn. Tất cả các quyền được bảo lưu.</p>
+    </div>
+</footer>
 </body>
+</html>
 
-<router-outlet></router-outlet>
+
