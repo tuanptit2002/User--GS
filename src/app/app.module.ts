@@ -10,6 +10,7 @@ import { TutorComponent } from './tutor/tutor.component';
 import { ClassNewComponent } from './class-new/class-new.component';
 import { RecruitmentComponent } from './recruitment/recruitment.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
