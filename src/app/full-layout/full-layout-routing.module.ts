@@ -31,7 +31,10 @@ const routes: Routes = [
         path:'contact',
         loadChildren: () => import('../contact/contact.module').then(m => m.ContactModule)
       },
-      
+      {
+        path:'lean-online',
+        loadChildren: () => import('../lean-online/lean-online.module').then(m => m.LeanOnlineModule)
+      }
     ]
   }
 ];

@@ -1,35 +1,251 @@
 
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--</head>-->
+<!--<body>-->
+<!--   <div id="container">-->
+<!--    <header>-->
+<!--        <nav class="nav">-->
+<!--            <a routerLink="/home-page" style="text-decoration: none"><h2 class="home">TRANG CHỦ</h2></a>-->
+<!--            <a routerLink="/parents" style="text-decoration: none"><h2 class="parent">PHỤ HUYNH</h2></a>-->
+<!--            <a routerLink="/tutor" style="text-decoration: none"><h2 class="tutor">GIA SƯ</h2></a>-->
+<!--            <a><img src="../../assets/images/ioc-header.jpg" class="icon"></a>-->
+<!--            <a routerLink="/class-new" style="text-decoration: none"><h2 class="class" >LỚP MỚI</h2></a>-->
+<!--            <a routerLink="/recruitment" class="recruitment" style="text-decoration: none"><h2>TUYỂN DỤNG</h2></a>-->
+<!--            <a routerLink="/contact" style="text-decoration: none"><h2 class="contact">LIÊN HỆ</h2></a>-->
+<!--            -->
+<!--        </nav>-->
+<!--        <div>-->
+<!--        <img src="../../assets/images/header2.jpg" class="head-fix">-->
+<!--    </div>-->
+<!--        -->
+<!--        -->
+<!--    </header>-->
+<!--   </div>-->
+<!--   <router-outlet></router-outlet>-->
+<!--   <footer>-->
+<!--    <div class="container">-->
+<!--        <p>&copy; 2023 Tên Của Bạn. Tất cả các quyền được bảo lưu.</p>-->
+<!--    </div>-->
+<!--</footer>-->
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-   <div id="container">
-    <header>
-        <nav class="nav">
-            <a routerLink="/home-page" style="text-decoration: none"><h2 class="home">TRANG CHỦ</h2></a>
-            <a routerLink="/parents" style="text-decoration: none"><h2 class="parent">PHỤ HUYNH</h2></a>
-            <a routerLink="/tutor" style="text-decoration: none"><h2 class="tutor">GIA SƯ</h2></a>
-            <a><img src="../../assets/images/ioc-header.jpg" class="icon"></a>
-            <a routerLink="/class-new" style="text-decoration: none"><h2 class="class" >LỚP MỚI</h2></a>
-            <a routerLink="/recruitment" class="recruitment" style="text-decoration: none"><h2>TUYỂN DỤNG</h2></a>
-            <a routerLink="/contact" style="text-decoration: none"><h2 class="contact">LIÊN HỆ</h2></a>
-            
-        </nav>
-        <div>
-        <img src="../../assets/images/header2.jpg" class="head-fix">
-    </div>
-        
-        
-    </header>
-   </div>
-   <router-outlet></router-outlet>
-   <footer>
-    <div class="container">
-        <p>&copy; 2023 Tên Của Bạn. Tất cả các quyền được bảo lưu.</p>
-    </div>
-</footer>
-</body>
-</html>
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-top">
+      <div class="header-top-container">
+        <div class="header-top-left">HỌC THỬ MIỄN PHÍ | CAM KẾT CHẤT LƯỢNG - TT CẦN TUYỂN 2 NNVP LƯƠNG TỪ
+          8TR/THÁNG -
+          XEM TẠI MỤC TUYỂN DỤNG
+        </div>
+        <ul class="header-top-icon">
+          <li class="header-top-icon-children"><i class="fa fa-envelope fa-sm" style="    color: rgba(255,255,255,.8);
+                            "></i>
+          </li>
+          <li class="header-top-icon-children"><i class="fa fa-phone fa-sm" style="    color: rgba(255,255,255,.8);
+                            "></i></li>
+          <li class="header-top-icon-children"><i class="fa fa-rss fa-sm" style="    color: rgba(255,255,255,.8);
+                            "></i></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="header-body">
+      <div class="header-body-container">
+        <div class="header-body-logo"></div>
+        <ul class="header-body-icon">
+          <li class="header-body-icon-children ">
+            <i class="fa fa-envelope" style="font-size: 35px;"></i>
+            <span>EMAIL</span>
+          </li>
+          <li class="header-body-icon-children ">
+            <i class="fa fa-clock-o" style="font-size: 33px;
+                            "></i>
+            <span>TƯ VẤN 24/7</span>
+          </li>
+          <li class="header-body-icon-children ">
+            <i class="fa fa-phone" style="font-size: 35px;
+                            "></i>
+            <span style="">091227666</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="header-bottom-container">
+        <ul class="nav">
+          <a routerLink=""><li class="nav-item">GIỚI THIỆU </li></a>
+          <a routerLink=""><li class="nav-item">ĐĂNG KÍ GIA SƯ </li></a>
+          <a routerLink=""><li class="nav-item"> HỌC PHÍ GIA SƯ </li></a>
+          <a routerLink="class-new"><li class="nav-item">LỚP MỚI CHƯA GIAO</li></a>
+            <a routerLink=""><li class="nav-item">HỎI ĐÁP</li></a>
+              <a routerLink=""><li class="nav-item">BLOG</li></a>
+                <a routerLink=""><li class="nav-item">TUYỂN DỤNG</li></a>
+                  <a routerLink=""><li class="nav-item">QUY TRÌNH ĐĂNG KÍ </li></a>
+          <a routerLink="/lean-online"><li class="nav-item">HỌC ONLINE</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <footer>
+    <footer style="   background-color: #363842;height: 480px; width: 100%;display: flex;
+            flex-direction: column;
+            justify-content: end;">
+      <div class="footer1-container">
+        <div class="footer1-block">
+          <span class="widget-title">LIÊN HỆ</span>
+          <div class="is-divider"></div>
+          <ul class="address">
+            <li><span style="font-size: 100%;"><i class="fa fa-phone"></i> <strong><a
+              href="tel:0903103800">
+                                            0903 103 800</a></strong> (24/7)</span></li>
+
+            <li><span style="font-size: 100%;"><i class="fa fa-phone"></i> <strong><a
+              href="tel:02862840000"> (028) 6284 0000</a></strong> (giờ HC)</span></li>
+            <li><span style="font-size: 100%;"><i class="fa fa-envelope"></i>
+                                    trungtamtienphong@gmail.com</span></li>
+            <li><span style="font-size: 100%;"><i class="fa fa-map-pin"></i> Quận 7: 1041/108 Trần Xuân
+                                    Soạn, Tân Hưng, Q7 (<a href="https://g.page/giasutienphong" target="_blank"
+                                                           rel="noopener">Google map</a>)</span></li>
+            <li><span style="font-size: 100%;"><i class="fa fa-map-pin"></i> Thủ Đức: 144c Nam
+                                    Hoà,
+                                    Phước Long A , Thủ Đức (Quận 9 cũ) </span></li>
+            <li><span style="font-size: 100%;"><i class="fa fa-map-pin"></i> Bình Dương: ĐT745 An
+                                    Thạnh,
+                                    Thuận An, Bình Dương </span></li>
+            <li><span style="font-size: 100%;">(Cung cấp gia sư 1 kèm 1 tại nhà tất cả các khu
+                                    vực)</span>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer1-block">
+
+          <span class="widget-title">Gia sư kèm các môn</span>
+          <div class="is-divider"></div>
+          <ul class="address">
+            <li><span style="font-size: 100%;"><a href="/day-kem-toan.html">Gia sư môn Toán</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/day-kem-mon-vat-ly.html">Gia sư môn
+                                        Lý</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/day-kem-hoa-hoc">Gia sư môn Hóa</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/day-kem-tieu-hoc-cap-1">Gia sư tiểu
+                                        học</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-day-bao-bai.html">Gia sư báo
+                                        bài</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-day-ve.html">Gia sư dạy vẽ</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/day-kem-hs-truong-quoc-te.html">Gia sư hs
+                                        trường
+                                        quốc tế</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-dan-piano-organ-guitar.html">Gia sư
+                                        Piano
+                                        organ Guitar</a></span></li>
+          </ul>
+
+        </div>
+        <div class="footer1-block">
+
+          <span class="widget-title">Gia sư ngoại ngữ</span>
+          <div class="is-divider"></div>
+          <ul class="address">
+            <li><span style="font-size: 100%;"><a href="/day-kem-tieng-anh">Gia sư tiếng Anh</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/day-tieng-trung.html"> Gia sư tiếng
+                                        Hoa</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-tieng-nhat.html"> Gia sư tiếng
+                                        Nhật</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-tieng-han.html">Gia sư tiếng
+                                        Hàn</a></span>
+            </li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-day-toeic.html">Gia sư luyện
+                                        Toeic</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/ielts">Gia sư dạy IELTS</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/gia-su-day-starters-movers-flyers.html">Gia sư
+                                        Starters, Movers, Flyers</a></span></li>
+            <li><span style="font-size: 100%;"><a href="/day-tieng-viet.html">Tiếng Việt người nước
+                                        ngoài</a></span></li>
+          </ul>
+
+        </div>
+        <div class="footer1-block">
+
+          <span class="widget-title">Danh mục</span>
+          <div class="is-divider small"></div>
+          <li><span style="font-size: 100%;"><a href="/tin-trung-tam">Tin trung tâm</a></span></li>
+          <li><span style="font-size: 100%;"><a href="/thong-tin-can-biet">Thông tin cần biết</a></span>
+          </li>
+          <li><span style="font-size: 100%;"><a href="/gia-su-tai-quan">Gia sư các quận</a></span></li>
+          <li><span style="font-size: 100%;"><a href="/hoc-tieng-anh-online">Học tiếng Anh
+                                    online</a></span>
+          </li>
+          <li><span style="font-size: 100%;"><a href="/cac-lop-day-them">Các lớp dạy thêm</a></span></li>
+          <span class="widget-title">Trên mạng xã hội</span>
+          <div class="is-divider small"></div>
+          <ul style="height: 40px; width: 100%; display: flex;gap: 7px;">
+            <li class="footer1-block-Social"><a href=""><i
+              class="fa fa-facebook-f footer-right-icon fa-xs"></i></a></li>
+            <li class="footer1-block-Social"><a href=""><i
+              class="fa fa-twitter footer-right-icon"></i></a>
+            </li>
+            <li class="footer1-block-Social"><a href=""><i
+              class="fa fa-pinterest footer-right-icon"></i></a></li>
+            <li class="footer1-block-Social"><a href=""><i
+              class="fa fa-linkedin footer-right-icon"></i></a>
+            </li>
+            <li class="footer1-block-Social"><a href=""><i
+              class="fa fa-youtube footer-right-icon"></i></a>
+            </li>
+            <li class="footer1-block-Social"><a href=""><i class="fa fa-vk footer-right-icon"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+    <footer style="    background-color: #060606;">
+      <div class="footer2-container">
+        <ul class="footer2-container-top">
+          <li class="footer2-container-top-text">THANH TOÁN</li>
+          <li class="footer2-container-top-text">Ý KIẾN KHÁC HÀNG</li>
+          <li class="footer2-container-top-text">HỢP ĐỒNG GIA SƯ</li>
+          <li class="footer2-container-top-text">SITEMAP</li>
+          <li class="footer2-container-top-text">CHÍNH SÁCH BẢO MẬT</li>
+        </ul>
+        <div class="footer2-container-bottom" style="margin-top: 40px;">
+          <p style=" color: rgba(255, 255, 255, .5);display: flex;justify-content: center;">Copyright 2023
+            ©
+            Made by Henry-Phùng-Tiến-PTIT <i class="fa fa-heart" style="margin: 4px 0px 0px 3px ;"></i>
+          </p>
+          <div style="display: flex;justify-content: center;margin-top: 20px;"><img
+            src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-02.png?ID=eccb94f2-05be-4dea-ba54-24286cc6f5b2">
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </footer>
+
+</div>
+
+
+
+</body>
+
+</html>
 

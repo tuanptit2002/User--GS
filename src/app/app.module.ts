@@ -11,6 +11,7 @@ import { ClassNewComponent } from './class-new/class-new.component';
 import { RecruitmentComponent } from './recruitment/recruitment.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LeanOnlineComponent } from './lean-online/lean-online.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     TutorComponent,
     ClassNewComponent,
     RecruitmentComponent,
-    ContactComponent
+    ContactComponent,
+    LeanOnlineComponent
   ],
   imports: [
     BrowserModule,
