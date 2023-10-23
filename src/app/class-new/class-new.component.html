@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <header class="grid">
-            <h1>Có 3 kết quả</h1>
-            <!-- <nav>
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">ConTact</a>
-            </nav> -->
-        </header>
+        <div class="class-section">
+        <div class="col small-12">
+        <div class="breadcrumbs">
+                <p id="breadcrumbs">
+                    <span>
+                        <a href="" style="color: rgba(102,102,102,.7); text-decoration: none; ">Trang chủ</a>
+                        ">>"
+                        <span class="breadcrumb_last" aria-current="page">
+                            Danh Sách Lớp Mới
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="row filter">
+                <div class="text-filter">
+                 <h5 style="color: #555; width: 100%; margin-bottom: 0.5em; text-rendering: optimizeSpeed; font-size: inherit;"><i class="fa-solid fa-filter"></i> Bộ lọc</h5>
+                 </div>
+                  <form action="GET" class="form-filter">
+                   
+                    <div class="filter-parent" id="filter-subject">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Chọn môn học</span>
+                        </div>
+                        <div class="filter-menu">
+                            <div class="filter-menu-list" data-name="môn học">
+                                <div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" id="subject128">
+                                        <label for="subject128" class="checkmark">Anh văn giao tiếp</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-parent single" id="filter-province">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Chọn tỉnh/thành</span>
+                        </div>
+                    </div>
+                    <div class="filter-parent" id="filter-district">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Chọn quận/huyện</span>
+                        </div>
+                    </div>
+                    <div class="filter-parent" id="filter-caphoc">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Chọn cấp học</span>
+                        </div>
+                    </div>
+                    <div class="filter-parent" id="filter-formats">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Chọn trình độ</span>
+                        </div>
+                    </div>
+                    <div class="filter-parent single" id="filter-subject">
+                        <div class="filter-title">
+                        <span class="filter-notice" style="color: #6c757d;">Yêu Cầu Giới tính</span>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+
         <main class="grid"  >
            <div *ngFor="let class of data">
             <div class="card">
@@ -30,5 +85,6 @@
             </div>
         </div>
         </main>
+    </div>
     </body>
 </html>
