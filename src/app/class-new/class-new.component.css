@@ -51,22 +51,29 @@
 
 }
 
-.filter-parent .filter-menu {
-    border: 1px solid red;
-    position: absolute;
-    width: 100%;
-    -webkit-box-shadow: 0 1px 4px 0 rgb(0 0 0 / 70%);
-    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .7);
-    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 70%);
-    margin-bottom: 1rem;
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    padding-bottom: 30px;
-    max-height: 230px;
+
+
+.list-menu {
+    display: none;
     background-color: #fff;
-    z-index: 5;
-    color: #000;
+    position: relative;
+    /* height:500px; */
+
+}
+.filter-parent:hover .list-menu{
+    display: block;
+}
+.filter-menu-list{
+    display: inline;
+}
+.btn-filter{
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
+    margin-bottom: 5px;
+    font: 1em sans-serif;
+    color: #fff;
+    background-color: #2691b5;;
 }
 
 .grid {
