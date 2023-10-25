@@ -27,7 +27,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/app/class-new/script.js"]
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {
