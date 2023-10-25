@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ClassNewRoutingModule } from './class-new-routing.module';
 import { ClassControllerService } from '../swagger';
-
+import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ClassNewRoutingModule
+    ClassNewRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers:[ClassControllerService]
 })

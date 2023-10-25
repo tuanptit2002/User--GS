@@ -28,60 +28,50 @@
                         <i class="fa fa-filter"></i> Bộ lọc
                     </h5>
                 </div>
-                <form action="GET" class="form-filter">
-
-                    <div class="filter-parent" id="filter-subject">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Chọn môn học</span>
-                        </div>
-                        <div class="filter-menu">
-                            <div class="filter-menu-list" data-name="môn học">
-                                <div class="list-menu">
-                                    <div class="form-check mb-2">
-                                        <input type="checkbox" id="subject128">
-                                        <label for="subject128" class="checkmark">Anh văn giao tiếp</label>
-                                    </div>
-                                </div>
-
-                                <div class="list-menu">
-                                    <div class="form-check mb-2">
-                                        <input type="checkbox" id="subject129">
-                                        <label for="subject128" class="checkmark">Toán</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-parent single" id="filter-province">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Chọn tỉnh/thành</span>
-                        </div>
-                    </div>
-                    <div class="filter-parent" id="filter-district">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Chọn quận/huyện</span>
-                        </div>
-                    </div>
-                    <div class="filter-parent" id="filter-caphoc">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Chọn cấp học</span>
-                        </div>
-                    </div>
-                    <div class="filter-parent" id="filter-formats">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Chọn trình độ</span>
-                        </div>
-                    </div>
-                    <div class="filter-parent single" id="filter-subject">
-                        <div class="filter-title">
-                            <span class="filter-notice" style="color: #6c757d;">Yêu Cầu Giới tính</span>
-                        </div>
-                    </div>
-                    <button class="btn-filter" style="border: 1px solid red;"> <i class="fa fa-filter"></i> Lọc</button>
+                <form  class="form-filter" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata)">
+                    <select formControlName="subject" class="menu">
+                        <option >Chọn môn học</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                      <select formControlName="city" class="menu">
+                        <option >Chọn tỉnh/thành</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                      <select formControlName="district" class="menu">
+                        <option >Chọn quận/huyện</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                      <select formControlName="level_school" class="menu">
+                        <option >Chọn cấp học</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                      <select formControlName="level" class="menu">
+                        <option >Chọn trình độ</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                      <select formControlName="sex" class="menu">
+                        <option >Yêu Cầu Giới Tính</option>
+                    <option value="option2">Văn</option>
+                    <option value="option3">Anh</option>
+                    <option value="option4">Sử</option>
+                      </select>
+                    <button class="btn-filter" type="submit"> <i class="fa fa-filter"></i> Lọc</button>
                 </form>
             </div>
         </div>
-
+        <div class="total-result">
+            <p>Có 128 kết quả</p>
+        </div>
         <main class="grid">
             <div *ngFor="let class of data">
                 <div class="card">
@@ -101,6 +91,7 @@
             </div>
         </main>
     </div>
+
 </body>
 
 </html>
