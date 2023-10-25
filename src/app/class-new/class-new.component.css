@@ -27,44 +27,20 @@
     gap: 8px;
     width: 100%;
     align-items: center;
-}
-
-.filter-parent {
-    border: 1px solid red;
-    position: relative;
-    margin-right: 5px;
-    margin-bottom: 5px;
-
-}
-
-.filter-parent .filter-title {
-    border: 1px solid red;
     background-color: #fff;
-    border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 5px 20px 0 #f1f3f5, 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-    color: #6c757d;
-    cursor: pointer;
-    min-width: 160px;
-    height: 100%;
-    position: relative;
-    padding-bottom: 8px;
-
+    justify-content: space-around;
 }
 
-
-
-.list-menu {
-    display: none;
-    background-color: #fff;
-    position: relative;
-    /* height:500px; */
-
+.menu{
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
+    
 }
-.filter-parent:hover .list-menu{
-    display: block;
-}
-.filter-menu-list{
-    display: inline;
+.total-result{
+    margin: 20px 152px 0px 152px;
+    min-width: 100px;
+    height: 36.2px;
 }
 .btn-filter{
     min-width: 100px;
