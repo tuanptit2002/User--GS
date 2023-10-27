@@ -1,0 +1,116 @@
+.comments-area {
+    margin: 0px 152px 0px 152px;
+}
+
+.comment-feedback {
+    border: 1px solid red;
+    padding-bottom: 50px;
+}
+
+.comment-feedback-header {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.user-request {
+    padding: 0px 30px 50px 30px;
+}
+
+.tech-anwser {
+    padding: 0px 30px 0px 30px;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comment-respond {
+    background-color: rgba(0, 0, 0, .05);
+    margin-bottom: 100px;
+    padding: 0px 30px 0px 30px;
+}
+
+.comment-reply-title {
+    padding-top: 30px;
+    font-size: 1.2em;
+    color: #555555;
+    padding-bottom: 10px;
+}
+
+.comment-notes {
+    padding-bottom: 10px;
+}
+
+.comment-form-comment {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px #ccc;
+    outline: none;
+    max-width: 100%;
+    min-height: 120px;
+    margin-bottom: 25px;
+
+}
+
+.comment-form-input {
+    display: flex;
+    gap: 35px;
+}
+
+.comment-form-input-childen {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.input-comment {
+    width: 345px;
+    height: 35px;
+    box-shadow: 0 0 3px #ccc;
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.comment-subscription-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-submit {
+    height: 40px;
+    width: 120px;
+    background-color: #2691b5;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    margin-bottom: 20px;
+    border: none;
+
+}

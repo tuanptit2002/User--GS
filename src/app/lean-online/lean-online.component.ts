@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./lean-online.component.css']
 })
 export class LeanOnlineComponent {
-
+  onButtonClick() {
+    alert('Button Clicked!');
+  }
 }

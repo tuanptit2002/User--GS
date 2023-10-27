@@ -1,7 +1,9 @@
 .page-wrapper {
   margin: 0px 152px 0 152px;
   justify-content: space-between;
+  padding: 0px 30px 0px 30px;
 }
+
 /* .wp-caption aligncenter{
     margin: ;
 } */

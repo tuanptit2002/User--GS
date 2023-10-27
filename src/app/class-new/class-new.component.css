@@ -57,23 +57,30 @@
     display: none;
     background-color: #fff;
     position: relative;
-    /* height:500px; */
-
 }
-.filter-parent:hover .list-menu{
+
+.filter-parent:hover .list-menu {
     display: block;
 }
-.filter-menu-list{
+
+.filter-menu-list {
     display: inline;
+    position: absolute;
+    height: 200px;
+    width: 160px;
+    background-color: #fff;
+    border: 1px solid red;
 }
-.btn-filter{
+
+.btn-filter {
     min-width: 100px;
     height: 36.2px;
     padding: 2px;
     margin-bottom: 5px;
     font: 1em sans-serif;
     color: #fff;
-    background-color: #2691b5;;
+    background-color: #2691b5;
+    ;
 }
 
 .grid {

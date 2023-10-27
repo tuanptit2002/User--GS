@@ -12,6 +12,7 @@ import { RecruitmentComponent } from './recruitment/recruitment.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LeanOnlineComponent } from './lean-online/lean-online.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LeanOnlineComponent } from './lean-online/lean-online.component';
     ClassNewComponent,
     RecruitmentComponent,
     ContactComponent,
-    LeanOnlineComponent
+    LeanOnlineComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
