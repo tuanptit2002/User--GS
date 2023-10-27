@@ -152,4 +152,41 @@ export class ClassControllerService {
         );
     }
 
+
+     /**
+     * 
+     * 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+     public getTotal(observe?: 'body', reportProgress?: boolean): Observable<number>;
+     public getTotal(observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<number>>;
+     public getTotal(observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<number>>;
+     public getTotal(observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+ 
+         let headers = this.defaultHeaders;
+ 
+         // to determine the Accept header
+         let httpHeaderAccepts: string[] = [
+             '*/*'
+         ];
+         const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+         if (httpHeaderAcceptSelected != undefined) {
+             headers = headers.set('Accept', httpHeaderAcceptSelected);
+         }
+ 
+         // to determine the Content-Type header
+         const consumes: string[] = [
+         ];
+ 
+         return this.httpClient.request<number>('post',`${this.basePath}/api/v1/class/get-total`,
+             {
+                 withCredentials: this.configuration.withCredentials,
+                 headers: headers,
+                 observe: observe,
+                 reportProgress: reportProgress
+             }
+         );
+     }
+
 }
