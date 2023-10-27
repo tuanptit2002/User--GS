@@ -1,5 +1,5 @@
 .breadcrumbs {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: #222;
     font-weight: bold;
     letter-spacing: 0;
@@ -12,17 +12,17 @@
 
 .filter {
     margin: 0px 152px 0px 152px;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 .text-filter {
     margin-bottom: 15px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 }
 
 .form-filter {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     gap: 8px;
     width: 100%;
@@ -32,16 +32,74 @@
 }
 
 
+.menu {
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
+
+}
+
+.total-result {
+    margin: 20px 152px 0px 152px;
+    min-width: 100px;
+    height: 36.2px;
+}
+
+.btn-filter {
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
+    margin-bottom: 5px;
+    font: 1em sans-serif;
+    color: #fff;
+    background-color: #2691b5;
+    ;
+}
+
+.grid {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 20px 152px 20px 152px;
+}
+
+main {
+    border: 1px solid black;
+    max-width: 100%;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+
 
 
 .list-menu {
     display: none;
     background-color: #fff;
+
     position: relative;
 }
 
 .filter-parent:hover .list-menu {
     display: block;
+
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    border-radius: 3%;
+    /* margin-bottom: 200px; */
+}
+
+.card .card-header {
+    color: #1c83d2;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-radius: 3%;
+}
+
+.card-subject {
+    display: inline-block;
 }
 
 .filter-menu-list {
@@ -52,58 +110,79 @@
     background-color: #fff;
     border: 1px solid red;
 
-    .menu {
-        min-width: 100px;
-        height: 36.2px;
-        padding: 2px;
+}
 
-    }
+.menu {
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
 
-    .total-result {
-        margin: 20px 152px 0px 152px;
-        min-width: 100px;
-        height: 36.2px;
+}
 
-    }
+.total-result {
+    margin: 20px 152px 0px 152px;
+    min-width: 100px;
+    height: 36.2px;
 
-    .btn-filter {
-        min-width: 100px;
-        height: 36.2px;
-        padding: 2px;
-        margin-bottom: 5px;
-        font: 1em sans-serif;
-        color: #fff;
-        background-color: #2691b5;
-        ;
-    }
+}
 
-    .grid {
-        border: 1px solid red;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-    }
+.btn-filter {
+    min-width: 100px;
+    height: 36.2px;
+    padding: 2px;
+    margin-bottom: 5px;
+    font: 1em sans-serif;
+    color: #fff;
+    background-color: #2691b5;
+    ;
+}
 
-    main {
-        border: 1px solid red;
-        max-width: 100%;
-        margin: 60px auto;
-        padding: 20px;
-    }
+.grid {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+main {
+    border: 1px solid red;
+    max-width: 100%;
+    margin: 60px auto;
+    padding: 20px;
+}
 
 
 
-    .card {
-        background-color: #fff;
-        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
-        height: 100%;
-    }
+.card {
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
 
-    .card-subject {
+.card-subject {
 
-        display: inline-block;
+    display: inline-block;
 
-        margin-right: 10px;
+    margin-right: 10px;
 
-    }
+}
+
+
+
+.car-text-boy {
+    margin-top: 5px;
+    /* padding-left: 5px; */
+}
+
+.card-footer {
+    display: inline-block;
+    float: right;
+    color: #1c83d2;
+    padding: 0.35rem 1rem;
+}
+
+.food-filter {
+    margin: 20px 152px 20px 152px;
+    text-align: center;
+
 }
