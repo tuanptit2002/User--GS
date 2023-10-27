@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="total-result">
-            <p>Có {{data.length}} kết quả</p>
+            <p>Có {{total}} kết quả</p>
         </div>
         <main class="grid">
             <div *ngFor="let class of data">
@@ -92,8 +92,16 @@
                 </div>
                     <div class="card-footer" ><a href="" >Xem chi tiết</a></div>
                 </div>
+                
             </div>
+               
         </main>
+        <div class="food-filter" style="border: 1px solid black;">
+            <ul style="display: inline-flex;list-style: none; " *ngFor="let page of numbers">
+                <li style="height: 30px; width: 30px; border-radius: 50%; border: 0.5px solid black; margin: 2px 5px 2px 5px;"><a href="" style="text-decoration: none;">{{page}}</a></li>
+                
+            </ul>
+        </div>
     </div>
 
 </body>

@@ -61,7 +61,7 @@
 }
 
 main {
-    border: 1px solid beige;
+    border: 1px solid black;
     max-width: 100%;
     margin: 60px auto;
     padding: 20px;
@@ -99,4 +99,9 @@ main {
     float: right;
     color: #1c83d2;
     padding: 0.35rem 1rem;
+}
+
+.food-filter{
+    margin: 20px 152px 20px 152px;
+    text-align: center;
 }

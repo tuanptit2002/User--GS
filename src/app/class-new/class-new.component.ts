@@ -11,13 +11,21 @@ import { FormBuilder,FormGroup } from '@angular/forms';
 export class ClassNewComponent implements OnInit{
   formdata: FormGroup
 data : any;
+total:any;
+numbers: any;
   ngOnInit(): void {
 
   }
 
   constructor(private classControllerService: ClassControllerService,
     private formBuilder: FormBuilder){
-    const pageSize = new FilterClass(0, 20);
+   classControllerService.getTotal().subscribe(resp => {this.total = resp
+    this.numbers = Array.from({ length: this.total }, (_, i) => i + 1);
+    console.log(this.numbers)}
+    );
+   
+  
+    const pageSize = new FilterClass(1, 2);
       this.classControllerService.filter(pageSize).subscribe(resp => {this.data = resp.content
       console.log(this.data)
       });
@@ -33,5 +41,9 @@ data : any;
 
   onClickSubmit(data:any){
     console.log(data.value)
+  }
+
+  reloadPage(data:any){
+
   }
 }
