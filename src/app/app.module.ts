@@ -12,7 +12,10 @@ import { RecruitmentComponent } from './recruitment/recruitment.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LeanOnlineComponent } from './lean-online/lean-online.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+import { CommentComponent } from './comment/comment.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ClassNewComponent,
     RecruitmentComponent,
     ContactComponent,
-    LeanOnlineComponent
+    LeanOnlineComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
