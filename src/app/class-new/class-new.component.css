@@ -27,29 +27,10 @@
     gap: 8px;
     width: 100%;
     align-items: center;
-}
-
-.filter-parent {
-    border: 1px solid red;
-    position: relative;
-    margin-right: 5px;
-    margin-bottom: 5px;
-
-}
-
-.filter-parent .filter-title {
-    border: 1px solid red;
     background-color: #fff;
-    border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 5px 20px 0 #f1f3f5, 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-    color: #6c757d;
-    cursor: pointer;
-    min-width: 160px;
-    height: 100%;
-    position: relative;
-    padding-bottom: 8px;
-
+    justify-content: space-around;
 }
+
 
 
 
@@ -70,44 +51,59 @@
     width: 160px;
     background-color: #fff;
     border: 1px solid red;
-}
 
-.btn-filter {
-    min-width: 100px;
-    height: 36.2px;
-    padding: 2px;
-    margin-bottom: 5px;
-    font: 1em sans-serif;
-    color: #fff;
-    background-color: #2691b5;
-    ;
-}
+    .menu {
+        min-width: 100px;
+        height: 36.2px;
+        padding: 2px;
 
-.grid {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
+    }
 
-main {
-    border: 1px solid red;
-    max-width: 100%;
-    margin: 60px auto;
-    padding: 20px;
-}
+    .total-result {
+        margin: 20px 152px 0px 152px;
+        min-width: 100px;
+        height: 36.2px;
+
+    }
+
+    .btn-filter {
+        min-width: 100px;
+        height: 36.2px;
+        padding: 2px;
+        margin-bottom: 5px;
+        font: 1em sans-serif;
+        color: #fff;
+        background-color: #2691b5;
+        ;
+    }
+
+    .grid {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    main {
+        border: 1px solid red;
+        max-width: 100%;
+        margin: 60px auto;
+        padding: 20px;
+    }
 
 
 
-.card {
-    background-color: #fff;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
-    height: 100%;
-}
+    .card {
+        background-color: #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+        height: 100%;
+    }
 
-.card-subject {
-    display: inline-block;
+    .card-subject {
 
-    margin-right: 10px;
+        display: inline-block;
 
+        margin-right: 10px;
+
+    }
 }
