@@ -65,7 +65,7 @@
 }
 
 main {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     max-width: 100%;
     margin: 60px auto;
     padding: 20px;
@@ -108,7 +108,7 @@ main {
     height: 200px;
     width: 160px;
     background-color: #fff;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
@@ -138,14 +138,14 @@ main {
 }
 
 .grid {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
 main {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-width: 100%;
     margin: 60px auto;
     padding: 20px;
@@ -173,10 +173,18 @@ main {
     margin-top: 5px;
     /* padding-left: 5px; */
 }
-
-.card-footer {
-    display: inline-block;
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.card-footer-right {
+    /* display: flexbox; */
     float: right;
+    color: #1c83d2;
+    padding: 0.35rem 1rem;
+}
+.card-footer-left{
+    float:left;
     color: #1c83d2;
     padding: 0.35rem 1rem;
 }
@@ -185,4 +193,16 @@ main {
     margin: 20px 152px 20px 152px;
     text-align: center;
 
+}
+.button-food-card{
+    cursor: pointer;
+    height: 30px;
+     width: 30px;
+      border-radius: 50%;
+      color: #1c83d2;
+}
+.button-food-card:hover{
+    cursor: pointer;
+    
+    color: rgba(0, 0, 0, 0.1);
 }

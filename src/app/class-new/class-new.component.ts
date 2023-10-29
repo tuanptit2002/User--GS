@@ -20,12 +20,12 @@ numbers: any;
   constructor(private classControllerService: ClassControllerService,
     private formBuilder: FormBuilder){
    classControllerService.getTotal().subscribe(resp => {this.total = resp
-    this.numbers = Array.from({ length: this.total }, (_, i) => i + 1);
+    this.numbers = Array.from({ length: (this.total/12)+1 }, (_, i) => i + 1);
     console.log(this.numbers)}
     );
    
   
-    const pageSize = new FilterClass(1, 2);
+    const pageSize = new FilterClass(0, 12);
       this.classControllerService.filter(pageSize).subscribe(resp => {this.data = resp.content
       console.log(this.data)
       });
@@ -43,7 +43,11 @@ numbers: any;
     console.log(data.value)
   }
 
-  reloadPage(data:any){
-
+  nextPage(data:any){
+    const pageSize = new FilterClass((data-1), 12);
+    console.log("data ne"+ data);
+    this.classControllerService.filter(pageSize).subscribe(resp => {this.data = resp.content
+      console.log(this.data)
+      });
   }
 }
