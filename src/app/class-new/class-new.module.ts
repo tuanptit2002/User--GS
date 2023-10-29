@@ -2,7 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ClassNewRoutingModule } from './class-new-routing.module';
-import { ClassControllerService } from '../swagger';
+import {
+  CityControllerService,
+  ClassControllerService,
+  DistrictControllerService, LevelSchoolControllerService,
+  SubjectControllerService,
+  TechClassControllerService
+} from '../swagger';
 import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
@@ -13,6 +19,11 @@ import {FormsModule,ReactiveFormsModule} from "@angular/forms";
     FormsModule,
     ReactiveFormsModule
   ],
-  providers:[ClassControllerService]
+  providers:[ClassControllerService, 
+    SubjectControllerService, 
+    DistrictControllerService, 
+    CityControllerService,
+    LevelSchoolControllerService,
+  TechClassControllerService]
 })
 export class ClassNewModule { }

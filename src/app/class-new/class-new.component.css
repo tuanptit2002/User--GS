@@ -46,6 +46,8 @@
 }
 
 .btn-filter {
+    cursor: pointer;
+    border: none;
     min-width: 100px;
     height: 36.2px;
     padding: 2px;
@@ -53,7 +55,7 @@
     font: 1em sans-serif;
     color: #fff;
     background-color: #2691b5;
-    ;
+    
 }
 
 .grid {
@@ -126,7 +128,7 @@ main {
 
 }
 
-.btn-filter {
+/* .btn-filter {
     min-width: 100px;
     height: 36.2px;
     padding: 2px;
@@ -135,7 +137,7 @@ main {
     color: #fff;
     background-color: #2691b5;
     ;
-}
+} */
 
 .grid {
     /* border: 1px solid red; */
