@@ -6,6 +6,7 @@ import {
   CityControllerService,
   ClassControllerService,
   DistrictControllerService, LevelSchoolControllerService,
+  MajoredControllerService,
   SubjectControllerService,
   TechClassControllerService
 } from '../swagger';
@@ -24,6 +25,8 @@ import {FormsModule,ReactiveFormsModule} from "@angular/forms";
     DistrictControllerService, 
     CityControllerService,
     LevelSchoolControllerService,
-  TechClassControllerService]
+  TechClassControllerService,
+    MajoredControllerService
+]
 })
 export class ClassNewModule { }

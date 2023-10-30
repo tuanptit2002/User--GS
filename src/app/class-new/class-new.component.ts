@@ -4,6 +4,7 @@ import {
   ClassControllerService,
   DistrictControllerService,
   FilterClass, LevelSchoolControllerService,
+  MajoredControllerService,
   SubjectControllerService,
   TechClassControllerService
 } from '../swagger';
@@ -25,6 +26,7 @@ citys:{ city_id: number; city_text: string; }[] = [];
 districts:{district_id:number; district_text: string;}[] = [];
 levelSchools:{levelSchool_id:number; levelSchool_text: string;}[] = [];
 teachClasss: {teachClass_id:number; teachClass_text: string;}[] = [];
+majoreds:{majored_id:number; majored_text: string;}[] = [];
   ngOnInit(): void {
     this.subjectControllerService.findAll1().subscribe(resp => resp.result?.map( x=> {
       if (x.id !== undefined && x.subject !== undefined) {
@@ -53,6 +55,14 @@ teachClasss: {teachClass_id:number; teachClass_text: string;}[] = [];
       this.teachClasss = [teachClass, ...this.teachClasss];
     }
   }))
+
+  this.majoredControllerService.findAll2().subscribe(resp => resp.result?.map( x =>{
+    if (x.id !== undefined && x.name !== undefined) {
+      const majored = {majored_id: x.id, majored_text: x.name};
+      this.majoreds = [majored, ...this.majoreds];
+    }
+  }));
+
   }
 
   constructor(private classControllerService: ClassControllerService,
@@ -61,6 +71,7 @@ teachClasss: {teachClass_id:number; teachClass_text: string;}[] = [];
     private cityControllerService: CityControllerService,
     private levelSchoolControllerService : LevelSchoolControllerService,
     private teachClassControllerService : TechClassControllerService,
+    private majoredControllerService : MajoredControllerService,
     private formBuilder: FormBuilder){
    classControllerService.getTotal().subscribe(resp => {this.total = resp
     this.numbers = Array.from({ length: (this.total/12)+1 }, (_, i) => i + 1);
@@ -85,7 +96,32 @@ teachClasss: {teachClass_id:number; teachClass_text: string;}[] = [];
   }
 
   onClickSubmit(data:any){
-    console.log(data.value)
+    let tmp = data.value;
+     if(tmp.city === 'Chọn tỉnh/thành'  ){
+      tmp.city = undefined
+     }
+     if(tmp.subject === 'Chọn môn học'  ){
+      tmp.subject = undefined
+     }
+     if(tmp.district === 'Chọn tỉnh/thành'  ){
+      tmp.district = undefined
+     }
+     if(tmp.level_school === 'Chọn quận/huyện'  ){
+      tmp.level_school = undefined
+     }
+     if(tmp.level === 'Chọn trình độ'  ){
+      tmp.level = ""
+     }
+     if(tmp.sex === 'Yêu Cầu Giới Tính'  ){
+      tmp.sex = ""
+     }
+
+
+    const filterClass =  new FilterClass(0,12,undefined,"", tmp.city  , tmp.district,tmp.level,tmp.level_school,tmp.subject,undefined,tmp.sex);
+    console.log(filterClass);
+    // console.log(data.value)
+
+    this.classControllerService.filterPageUser(filterClass).subscribe(resp => this.data = resp.content);
   }
 
   nextPage(data:any){
