@@ -46,7 +46,8 @@ export class FilterClass implements FilterClassDTO{
               requestLevel?: string,
               idLevelSchool?: number,
               subject?: number,
-              classRoom?: number
+              classRoom?: number,
+              requestSex?: string
   ){
     this.pageNum = pageNum;
     this.pageSize = pageSize;
@@ -57,6 +58,7 @@ export class FilterClass implements FilterClassDTO{
     this.requestLevel = requestLevel;
     this.idLevelSchool = idLevelSchool;
     this.subject = subject;
-    this.classRoom = classRoom
+    this.classRoom = classRoom;
+    this.requestSex = requestSex;
   }
 }

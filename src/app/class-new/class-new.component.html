@@ -50,9 +50,11 @@
                       </select>
                       <select formControlName="level" class="menu">
                         <option style="display: none;">Chọn trình độ</option>
-                    <option value="Giáo viên">Giáo Viên</option>
-                    <option value="Sinh viên">Sinh viên</option>
-                    <!-- <option value="option4">Sử</option> -->
+                        <option value="Giáo Viên">Giáo Viên</option>
+                        <option value="Sinh viên">Sinh Viên</option>
+                        <!-- <option value="nam">Nam</option> -->
+                    <!-- <option *ngFor="let majored of majoreds" [value]="majored.majored_id">{{majored.majored_text}}</option> -->
+                  
                       </select>
                       <select formControlName="sex" class="menu">
                         <option style="display: none;">Yêu Cầu Giới Tính</option>
