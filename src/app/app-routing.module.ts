@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
-import { RegisterComponent } from './register/register.component';
+
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     ,
 
   },
-  { path: 'register', component: RegisterComponent },
+
 ];
 
 @NgModule({

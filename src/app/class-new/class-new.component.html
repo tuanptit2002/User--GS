@@ -29,41 +29,38 @@
                     </h5>
                 </div>
                 <form  class="form-filter" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata)">
-                    <select formControlName="subject" class="menu">
-                        <option >Chọn môn học</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                    <select formControlName="subject" class="menu" >
+                        <option style="display: none;">Chọn môn học</option>
+                    <option [value]="subject.subject_id" *ngFor="let subject of subjects">{{subject.subject_text}}</option>
+
                       </select>
-                      <select formControlName="city" class="menu">
-                        <option >Chọn tỉnh/thành</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                      <select formControlName="city" class="menu" (ngModelChange)="searchDistrict($event)">
+                        <option style="display: none;">Chọn tỉnh/thành</option>
+                    <option *ngFor="let city of citys" [value]="city.city_id">{{city.city_text}}</option>
+
                       </select>
                       <select formControlName="district" class="menu">
-                        <option >Chọn quận/huyện</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                        <option style="display: none;">Chọn quận/huyện</option>
+                    <option *ngFor="let district of districts" [value]="district.district_id">{{district.district_text}}</option>
                       </select>
                       <select formControlName="level_school" class="menu">
-                        <option >Chọn cấp học</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                        <option style="display: none;">Chọn cấp học</option>
+                    <option *ngFor="let teachClass of teachClasss " [value]="teachClass.teachClass_id">{{teachClass.teachClass_text}}</option>
+                    
                       </select>
                       <select formControlName="level" class="menu">
-                        <option >Chọn trình độ</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                        <option style="display: none;">Chọn trình độ</option>
+                        <option value="Giáo Viên">Giáo Viên</option>
+                        <option value="Sinh viên">Sinh Viên</option>
+                        <!-- <option value="nam">Nam</option> -->
+                    <!-- <option *ngFor="let majored of majoreds" [value]="majored.majored_id">{{majored.majored_text}}</option> -->
+                  
                       </select>
                       <select formControlName="sex" class="menu">
-                        <option >Yêu Cầu Giới Tính</option>
-                    <option value="option2">Văn</option>
-                    <option value="option3">Anh</option>
-                    <option value="option4">Sử</option>
+                        <option style="display: none;">Yêu Cầu Giới Tính</option>
+                    <option value="nam">Nam</option>
+                    <option value="nữ">Nữ</option>
+                    <!-- <option value="option4">Sử</option> -->
                       </select>
                     <button class="btn-filter" type="submit"> <i class="fa fa-filter"></i> Lọc</button>
                 </form>
@@ -79,7 +76,7 @@
                         <h3 style="margin-right: 4px;"><a href="/" style="text-decoration: none">{{class.id}}</a></h3>
                     </div>
                     <div *ngFor="let tmp of class.subjects" class="card-subject">
-                       <a href="" style="display: flex; text-decoration: none;"><i class="fa fa-book" style="margin: 6px 2px 0px 0px;"></i> <p> {{tmp.subject}}</p></a> 
+                       <a href="" style="display: flex; text-decoration: none;"><i class="fa fa-book" style="margin: 6px 2px 0px 0px;"></i> <p> {{tmp.subject}}</p></a>
                     </div>
                      <div class="car-boy" style="height: 271px; width: 280px; border-bottom: 0.5px solid blue;">
                     <p  class="car-text-boy"><i class="fa fa-map-pin" style="padding-right: 2px;"></i> {{class.districts}}</p>
@@ -92,17 +89,17 @@
                     <div class="card-footer-right" ><a href="" style="text-decoration: none;" >Xem chi tiết</a></div>
                 </div>
                 </div>
-                
+
             </div>
-               
+
         </main>
         <div class="food-filter" >
             <button style="height: 30px;width: 30px; border: none; border-radius: 50%; cursor: pointer;" ><i class="fa-solid fa-angle-left"></i></button>
             <ul style="display: inline-flex;list-style: none; " *ngFor="let page of numbers">
                 <li style="height: 30px; width: 30px; border-radius: 50%; border: 0.5px solid black; margin: 2px 5px 2px 5px;"><button class="button-food-card" style="border: none;" (click)="nextPage(page)">{{page}}</button></li>
-                
+
             </ul>
-            
+
             <button style="height: 30px;width: 30px; border: none; border-radius: 50%; cursor: pointer;"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>

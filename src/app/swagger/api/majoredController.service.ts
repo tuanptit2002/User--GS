@@ -22,6 +22,7 @@ import { SuccessDTOString } from '../model/successDTOString';
 
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import { RespondDTOListMajored } from '../model/respondDTOListMajored';
 
 
 @Injectable()
@@ -103,4 +104,40 @@ export class MajoredControllerService {
         );
     }
 
+
+    /**
+     * 
+     * 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public findAll2(observe?: 'body', reportProgress?: boolean): Observable<RespondDTOListMajored>;
+    public findAll2(observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<RespondDTOListMajored>>;
+    public findAll2(observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<RespondDTOListMajored>>;
+    public findAll2(observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            '*/*'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+        ];
+
+        return this.httpClient.request<RespondDTOListMajored>('post',`${this.basePath}/api/v1/majored/find-all`,
+            {
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
 }

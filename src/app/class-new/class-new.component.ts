@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClassControllerService, FilterClass } from '../swagger';
+import { ClassControllerService, FislterClass } from '../swagger';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -10,11 +10,44 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ClassNewComponent implements OnInit {
   formdata: FormGroup
-  check = false;
   data: any;
   total: any;
   numbers: any;
   ngOnInit(): void {
+    this.subjectControllerService.findAll1().subscribe(resp => resp.result?.map(x => {
+      if (x.id !== undefined && x.subject !== undefined) {
+        // console.log(x)
+        const subject = { subject_id: x.id, subject_text: x.subject };
+        this.subjects = [subject, ...this.subjects]
+      }
+    }))
+    this.cityControllerService.findAll4().subscribe(resp => resp.result?.map(x => {
+      if (x.id !== undefined && x.name !== undefined) {
+        const city = { city_id: x.id, city_text: x.name };
+        this.citys = [city, ...this.citys];
+      }
+    }))
+
+    this.levelSchoolControllerService.findAll2().subscribe(resp => resp.result?.map(x => {
+      if (x.id !== undefined && x.name !== undefined) {
+        const levelSchool = { levelSchool_id: x.id, levelSchool_text: x.name };
+        this.levelSchools = [levelSchool, ...this.levelSchools];
+      }
+    }));
+
+    this.teachClassControllerService.findAll().subscribe(resp => resp.result?.map(x => {
+      if (x.id !== undefined && x.classroom !== undefined) {
+        const teachClass = { teachClass_id: x.id, teachClass_text: x.classroom };
+        this.teachClasss = [teachClass, ...this.teachClasss];
+      }
+    }))
+
+    this.majoredControllerService.findAll2().subscribe(resp => resp.result?.map(x => {
+      if (x.id !== undefined && x.name !== undefined) {
+        const majored = { majored_id: x.id, majored_text: x.name };
+        this.majoreds = [majored, ...this.majoreds];
+      }
+    }));
 
   }
 
@@ -54,9 +87,5 @@ export class ClassNewComponent implements OnInit {
       this.data = resp.content
       console.log(this.data)
     });
-  }
-
-  changeStatus() {
-    this.check = true
   }
 }
