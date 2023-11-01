@@ -3,7 +3,10 @@
   width: 100%;
   min-height: 139px;
 }
-.col, .gallery-item, .columns {
+
+.col,
+.gallery-item,
+.columns {
   position: relative;
   margin: 0;
   padding: 0 15px 30px;
@@ -29,8 +32,15 @@
 
 .header-top-icon {
   height: 100%;
-  width: 95.63px;
+  width: 300px;
   display: flex;
+
+}
+
+.sign-login {
+  display: flex;
+  align-items: center;
+  color: #f1f1f1;
 }
 
 .header-top-icon-children {

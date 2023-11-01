@@ -15,6 +15,7 @@ import { LeanOnlineComponent } from './lean-online/lean-online.component';
 
 import { CommentComponent } from './comment/comment.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     RecruitmentComponent,
     ContactComponent,
     LeanOnlineComponent,
-    CommentComponent
+    CommentComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
